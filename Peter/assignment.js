@@ -21,18 +21,36 @@ users.forEach(function(user){
 
 const strings = ["wow", "People", "mansion"]
 // write a forEach loop  to print each element in uppercase
-strings.forEach(function(string){
+/*strings.forEach(function(string){
     console.log(string.toUpperCase() );
-})
+})*/
+function str(strings) {
+    strings.forEach(function(string){
+        console.log(string.toUpperCase() );
+    })
+}
 
 const numbers = [1, 2, 3, 4, 5]
 // write a forEach loop that calculates the square of each number and prints the result.
-numbers.forEach(function(number){
+/*numbers.forEach(function(number){
     console.log(number**2);
-})
+})*/
+function num(numbers) {
+    numbers.forEach(function(number){
+        console.log(number**2);
+    })
+}
 
 const things = ["apple", "banana", "orange"]
 //  write a forEach loop that adds a greeting "Hello, " before each name and prints the result.
-things.forEach(function(thing){
+/*things.forEach(function(thing){
     console.log("Hello " +thing+ " i would love to eat you for breakfast");
-})
+})*/
+
+//create function for each of the task given
+
+function forEachLoop(things) {
+    things.forEach(function(thing){
+        console.log("Hello " +thing+ " i would love to eat you for breakfast");
+    })
+}
