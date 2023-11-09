@@ -1,0 +1,24 @@
+1. Write a for loop that prints the even numbers from 1 to 10.
+
+2. Write a while loop that prints the odd numbers from 3 to 20
+
+3. Write a forEach loop that prints the  double value of each  element in an array 
+
+4. Write an forEach loop that prints the sum of the age  and height of each user in the array below
+
+const users = [
+    {username:"Bright", age: 45, height: 4.3},
+    {username: "John", age: 32, height: 6.0},
+    {username: "Emma", age: 27, height: 5.5},
+    {username: "Alex", age: 50, height: 5.9}
+]
+
+5. Write a for loop that iterate through the array below and prints the sum of each value pair in the array below
+
+const nums = [
+    {initial: "23", final: "24"}
+    {initial: "22.4", final: "22.6"}
+    {initial: "23.7", final: "24.2"}
+    {initial: 22.8, final: 23.1}
+]
+
