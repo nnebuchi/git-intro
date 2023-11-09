@@ -20,7 +20,7 @@ const users = [
 users.forEach(function(user){
     console.log(user.username +" is "+user.age+" years old")
 })
-
+/*
 const strings = ["wow", "People", "mansion"]
 // write a forEach loop  to print each elemet in uppercase
 
@@ -30,3 +30,4 @@ const numbers = [1, 2, 3, 4, 5]
 const things = ["apple", "banana", "orange"]
 //  write a forEach loop that adds a greeting "Hello, " before each name and prints the result.
 
+*/
