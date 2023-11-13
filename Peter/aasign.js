@@ -42,7 +42,7 @@ users.forEach(function(user){
 
 //write a while loop that prints the odd numbers from 3 to 20
 
-let number = 3;
+let number = 4;
 
 while (number <= 20) {
   console.log(number);

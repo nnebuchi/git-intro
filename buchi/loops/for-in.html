@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For in</title>
+</head>
+<body>
+    <script>
+        const person = {
+            name: "David",
+            age: 25,
+            country: "Nigeria",
+            height: "5 ft",
+            weight: "60 kg",
+        }
+
+        for(let key in person){
+            console.log(`This persons's ${key} is ${person[key]}`);
+        }
+    </script>
+</body>
+</html>
