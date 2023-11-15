@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assesment-work</title>
+</head>
+<body>
+    <script>
+         // Write a program that asks the user for a score between 0 and 100  and prints A, B, C, D, or F depending on the score using the following grade system.
+        // 0-59: F
+        // 60-69: D
+        // 70-79: C
+        // 80-89: B
+        // 90-100: A
+
+        const grade = prompt("Enter your grade");
+        if (grade >= 90 && grade <= 100) {
+            alert("Grade: A")
+        }else if (grade >= 80 && Grade <= 89 ) {
+            alert("Grade: B")
+        } else if(Grade >= 70 && Grade <= 79){
+            alert("Grade: C")
+        } else if(Grade >= 60 && Grade <= 69){
+            alert('Grade: D')
+        } else if(Grade >= 0 && Grade <= 59){
+            alert('Grade: F')
+        } else{
+            alert('invalid score')
+        }
+    </script>
+</body>
+</html>
