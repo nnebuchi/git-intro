@@ -14,7 +14,7 @@
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
         <a class="navbar-brand" href="#">Your Website</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link contact" href="#">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -60,7 +60,7 @@
     <div class="table-section">
         <div class="container">
             <h2>Table Section</h2>
-            <table class="table">
+            <table class="table" id="data-table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -88,6 +88,12 @@
                         <td>Random Data 8</td>
                         <td>Random Data 9</td>
                     </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>nEW DATA</td>
+                        <td>Another data</td>
+                        <td>Extra Data</td>
+                        </tr>
                 </tbody>
             </table>
         </div>
@@ -138,7 +144,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-    <script src="computed_styles.js"></script>
+   
 
 
     <style>
@@ -181,5 +187,7 @@
             text-align: center;
         }
     </style>
+
+<script src="computed_styles.js"></script>
 </body>
 </html>
