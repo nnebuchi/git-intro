@@ -9,12 +9,51 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <!-- Custom CSS -->
-   
+    <style>
+        /* Add your custom styles here */
+        body {
+            padding-top: 56px;
+        }
+
+        .hero-section {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .table-section {
+            padding: 50px 0;
+        }
+
+        .services-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .footer {
+            background: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">Your Website</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +70,7 @@
                     <a class="nav-link" href="#">Services</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link contact" href="#">Contact Us</a>
+                    <a class="nav-link" href="#">Contact Us</a>
                 </li>
             </ul>
         </div>
@@ -60,13 +99,14 @@
     <div class="table-section">
         <div class="container">
             <h2>Table Section</h2>
-            <table class="table" id="data-table">
+            <table class="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Column 1</th>
                         <th scope="col">Column 2</th>
                         <th scope="col">Column 3</th>
+                        <th scope="col">Action</th> <!-- New column for action buttons -->
                     </tr>
                 </thead>
                 <tbody>
@@ -75,20 +115,31 @@
                         <td>Random Data 1</td>
                         <td>Random Data 2</td>
                         <td>Random Data 3</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">2</th>
                         <td>Random Data 4</td>
                         <td>Random Data 5</td>
                         <td>Random Data 6</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
                     </tr>
                     <tr>
                         <th scope="row">3</th>
                         <td>Random Data 7</td>
                         <td>Random Data 8</td>
                         <td>Random Data 9</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger">Delete</button>
+                        </td>
                     </tr>
-                    
                 </tbody>
             </table>
         </div>
@@ -139,50 +190,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-   
-
-
-    <style>
-        /* Add your custom styles here */
-        body {
-            padding-top: 56px;
-        }
-
-        .hero-section {
-            background: #f8f9fa;
-            padding: 100px 0;
-        }
-
-        .hero-content {
-            text-align: left;
-        }
-
-        .hero-img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .hero-buttons {
-            margin-top: 20px;
-        }
-
-        .table-section {
-            padding: 50px 0;
-        }
-
-        .services-section {
-            background: #f8f9fa;
-            padding: 50px 0;
-        }
-
-        .footer {
-            background: #343a40;
-            color: #ffffff;
-            padding: 20px 0;
-            text-align: center;
-        }
-    </style>
-
-<script src="computed_styles.js"></script>
+    <script src="intro.js"></script>
 </body>
 </html>
