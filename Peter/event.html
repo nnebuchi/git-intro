@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Bootstrap Website</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            padding-top: 56px;
+        }
+
+        .hero-section {
+            background: #f8f9fa;
+            padding: 100px 0;
+        }
+
+        .hero-content {
+            text-align: left;
+        }
+
+        .hero-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .hero-buttons {
+            margin-top: 20px;
+        }
+
+        .table-section {
+            padding: 50px 0;
+        }
+
+        .services-section {
+            background: #f8f9fa;
+            padding: 50px 0;
+        }
+
+        .footer {
+            background: #343a40;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">Your Website</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 hero-content">
+                    <h1>Welcome to Your Website</h1>
+                    <p>This is a simple Bootstrap website template with a two-column hero section.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Learn More</button>
+                        <button class="btn btn-secondary">Get Started</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://via.placeholder.com/400" alt="Hero Image" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Table Section -->
+    <div class="table-section">
+        <div class="container">
+            <h2>Table Section</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Column 1</th>
+                        <th scope="col">Column 2</th>
+                        <th scope="col">Column 3</th>
+                        <th scope="col">Action</th> <!-- New column for action buttons -->
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Random Data 1</td>
+                        <td>Random Data 2</td>
+                        <td>Random Data 3</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger" onclick="deleteKey(event)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Random Data 4</td>
+                        <td>Random Data 5</td>
+                        <td>Random Data 6</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger" onclick="deleteKey(event)">Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Random Data 7</td>
+                        <td>Random Data 8</td>
+                        <td>Random Data 9</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="invertColor(event)">Show</button>
+                            <button class="btn btn-danger" onclick="deleteKey(event)">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="row">
+                <!-- Service Cards -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 1</h5>
+                            <p class="card-text">Description of Service 1.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 2</h5>
+                            <p class="card-text">Description of Service 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Service 3</h5>
+                            <p class="card-text">Description of Service 3.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Your Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="event.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="button" onclick="changeColor(event)">
+            Click Here
+        </button>
+        <div id="prob-div">
+        
+        </div>
+    </div>
+
+    <ul id="myList">
+        <li>1st item</li>
+        <li>2nd item</li>
+        <li>3rd item</li>
+        <li>4th item</li>
+        <li>5th item</li>
+        <li>6th item</li>
+    </ul>
+     <button class="ulButton"  onclick="removeLastItem()">remove last item</button>
+
+    <p id="myParagraph"> Hello welcome to my world</p>
+    <button class="paarBtn" onclick="changeText(event)">Change Text</button>
+
+    <div id="contentDiv"></div>
+
+
+    <ul id="myList"></ul>
+
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button class="txtbtn" onclick="addItem()">Add Item</button>
+
+    </div>
+    <style>
+        #button{
+            background-color: red;
+            padding: 10px 20px;
+            color: pink;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        #prob-div{
+            margin-top: 20px;
+            height: 300px;
+            background: blue;
+            width: 400px;
+        }
+        #myList{
+            background-color: salmon;
+            list-style: none;
+            font-size: 20px;
+            font-weight: 600;
+            min-height: 200px;
+        }
+        #myList > li{
+            margin-bottom: 10px;
+        }
+
+        .ulButton, .paarBtn, .txtbtn{
+            padding: 10px 20px;
+            background-color: blue;
+            border: none;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+    </style>
+        
+    <script>
+        const clickButton = document.querySelector("#button")
+        clickButton.style.backgroundColor = 'pink';
+        clickButton.style.color = 'red';
+        clickButton.style.borderRadius = '8px';
+
+        const changeColor = (event) => {
+            const divButton = document.querySelector("#prob-div")
+           // divButton.style.backgroundColor = "red"
+            const target = event.target
+            //event.target.style.backgroundColor = 'red'
+            event.target.style.color = 'white'
+            // alert("clicked")
+        }
+         function removeLastItem() {
+        const myList = document.getElementById("myList");
+        myList.removeChild(myList.lastElementChild);
+        }
+       
+        const changeText = (event) => {
+            const changeText = document.querySelector("#myParagraph")
+            changeText.style.fontSize = "30px"
+            changeText.style.color = 'blue'
+            const userInput = prompt('Enter new text')
+        }
+        function addItem() {
+        const inputValue = document.getElementById("itemInput").value;
+        const myList = document.getElementById("myList");
+        const newItem = document.createElement("li");
+        newItem.textContent = inputValue;
+        myList.appendChild(newItem)
+        document.getElementById("itemInput").value = "exit";
+    }
+        
+
+    </script>
+</body>
+</html>

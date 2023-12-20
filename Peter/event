@@ -5,3 +5,5 @@ Event:
         onscroll - scroll
         on load - load page
         Un load - Page reload or redirect
+        event bubbling
+        event popagation

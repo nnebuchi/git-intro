@@ -74,12 +74,20 @@ const dataTableaRows = document.querySelectorAll('#data-table tbody tr');
 dataTableaRows[2].remove();
 
 const dataTableBody = document.querySelector('#data-table > tbody');
-console.log(dataTableBody)
+const newRow = document.createElement('tr')
+newRow.innerHTML = `
+<th scope="row">4</th>
+<td>New DATA</td>
+<td>Another data</td>
+<td>Extra Data</td>
+`
+dataTableBody.appendChild(newRow);
 
+
+/*const dataTableBody = document.querySelector('#data-table > tbody');
 dataTableBody.appendChild(`<tr>
 <th scope="row">4</th>
 <td>nEW DATA</td>
 <td>Another data</td>
 <td>Extra Data</td>
-</tr>`);
-
+</tr>`);*/
