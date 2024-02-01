@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body onload="populateDiv()">
     <div>
         <button id="button" onclick="changeColor(event)">
             Click Here
@@ -15,28 +15,35 @@
         </div>
     </div>
 
-    <ul id="myList">
-        <li>1st item</li>
-        <li>2nd item</li>
-        <li>3rd item</li>
-        <li>4th item</li>
-        <li>5th item</li>
-        <li>6th item</li>
-    </ul>
-     <button class="ulButton"  onclick="removeLastItem()">remove last item</button>
+    <ul id="list">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul> 
+    <input type="text" id="itemInput" placeholder="Enter item">
+    <button class="txtbtn" onclick="addList()">Add Item</button>
+    
 
+    <ul id="myList">
+        <li>yellow</li>
+        <li>gold</li>
+        <li>black</li>
+    </ul>
+    <button class="ulButton"  onclick="removeLastItem()">remove last item</button>
+     
     <p id="myParagraph"> Hello welcome to my world</p>
     <button class="paarBtn" onclick="changeText(event)">Change Text</button>
 
     <div id="contentDiv"></div>
 
-
-    <ul id="myList"></ul>
-
-    <input type="text" id="itemInput" placeholder="Enter item">
+    <ul id="lists">
+        <li>Faithful</li>
+        <li>Favour</li>
+        <li>Felix</li>
+    </ul> 
+    <input type="text" id="inputItem" placeholder="Enter item">
     <button class="txtbtn" onclick="addItem()">Add Item</button>
 
-    </div>
     <style>
         #button{
             background-color: red;
@@ -53,11 +60,10 @@
             width: 400px;
         }
         #myList{
-            background-color: salmon;
+            /* background-color: salmon; */
             list-style: none;
             font-size: 20px;
             font-weight: 600;
-            min-height: 200px;
         }
         #myList > li{
             margin-bottom: 10px;
@@ -82,12 +88,23 @@
 
         const changeColor = (event) => {
             const divButton = document.querySelector("#prob-div")
-           // divButton.style.backgroundColor = "red"
+            divButton.style.backgroundColor = "red"
             const target = event.target
             //event.target.style.backgroundColor = 'red'
             event.target.style.color = 'white'
             // alert("clicked")
         }
+
+        function addList() {
+        const input = document.querySelector("#itemInput").value;
+        console.log(input);
+        const lists = document.getElementById("list");
+        const newList = document.createElement("li");
+        newList.textContent = input;
+        list.appendChild(newList)
+        document.getElementById("itemInput").value = "New value";
+        }
+
          function removeLastItem() {
         const myList = document.getElementById("myList");
         myList.removeChild(myList.lastElementChild);
@@ -95,19 +112,30 @@
        
         const changeText = (event) => {
             const changeText = document.querySelector("#myParagraph")
-            changeText.style.fontSize = "30px"
-            changeText.style.color = 'blue'
-            const userInput = prompt('Enter new text')
+            changeText.style.fontSize = "27px"
+            const newText = prompt('Enter new text:');
+            myParagraph.textContent = newText;
+
+        }
+        
+        const populateDiv = () =>{
+            const cars = ['Toyota', 'Mercedes', 'Dodge', 'Ford']
+            let divHtml = ``;
+            cars.forEach(function(car){
+                divHtml += `<p>${car}</p>`;
+            })
+            console.log(divHtml);
+            document.querySelector("#contentDiv").innerHTML = divHtml;
         }
         function addItem() {
-        const inputValue = document.getElementById("itemInput").value;
-        const myList = document.getElementById("myList");
+        const inputValue = document.querySelector("#inputItem").value;
+        console.log(inputValue);
+        const lists = document.getElementById("lists");
         const newItem = document.createElement("li");
         newItem.textContent = inputValue;
-        myList.appendChild(newItem)
-        document.getElementById("itemInput").value = "exit";
-    }
-        
+        lists.prepend(newItem)
+        document.getElementById("inputItem").value = "New value";
+        }
 
     </script>
 </body>

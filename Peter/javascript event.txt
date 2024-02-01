@@ -1,0 +1,32 @@
+event bubbling
+event popagation
+Javascript Event:are ways for the browser to communicate with the web 
+    stimuli examples are as follows;
+        on click - click: 
+        on db click - double click
+        onscroll - scroll
+        on load - load page
+        Un load - Page reload or redirect
+        mouse hover
+        Keypress
+        mouse out
+        key out
+        re size
+        form
+        abort
+        touch end
+        keyup
+        uncheck
+        check
+        change
+        submit
+        input
+        scroll
+        onplay
+        on error
+        onpause
+
+Assignment
+four button diff text content label but they should have the same class
+using queryselectorAll target the class loop through the buttons to add evet listener such that it alert the text content of the button
+        

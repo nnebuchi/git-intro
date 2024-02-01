@@ -1,9 +1,0 @@
-Event:
-    is a stimuli examples are as follows;
-        on click - click 
-        on db click - double click
-        onscroll - scroll
-        on load - load page
-        Un load - Page reload or redirect
-        event bubbling
-        event popagation

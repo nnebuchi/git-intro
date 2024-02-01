@@ -1,0 +1,26 @@
+button{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 25px;
+    font-size: 19px;
+    font-weight: 600;
+}
+.section{
+    height: 400px;
+    margin-top: 20px;
+}
+#color, #backgrand{
+    background-color: goldenrod;
+    padding: 15px 25px;
+    margin: 20px;
+    font-size: 16px;
+    color: beige;
+    
+}
+.btn {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
