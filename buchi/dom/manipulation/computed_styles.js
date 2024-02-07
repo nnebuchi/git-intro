@@ -44,12 +44,14 @@ const dataTableaRows = document.querySelectorAll('#data-table tbody tr');
 dataTableaRows[2].remove();
 
 const dataTableBody = document.querySelector('#data-table > tbody');
-dataTableBody.appendChild(`<tr>
+const newRow = document.createElement('tr')
+newRow.innerHTML = `
 <th scope="row">4</th>
 <td>nEW DATA</td>
 <td>Another data</td>
 <td>Extra Data</td>
-</tr>`);
+`
+dataTableBody.appendChild(newRow);
 
 //textContent
 // innerHtml

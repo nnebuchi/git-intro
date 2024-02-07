@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="populateDiv()">
+
+    
+<div id="contentDiv"></div>
+    <script>
+
+        const populateDiv = () =>{
+            const cars = ['Toyota', 'Mercedes', 'Dodge', 'Ford']
+            let divHTML = ``;
+            cars.forEach(function(car){
+                divHTML += `<p>${car}</p>`;
+            })
+            console.log(divHTML);
+            document.querySelector("#contentDiv").innerHTML = divHTML;
+        }
+        
+    </script>
+</body>
+</html>
+
