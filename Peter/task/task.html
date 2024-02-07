@@ -21,6 +21,7 @@
 	</nav>
  
 		 	<div id="new" style="margin-top: 100px;"></div>
+			 <div id="typing" style=""></div>
 				
 			
 
@@ -34,6 +35,7 @@
     const inputTxt = document.getElementById('inputTxt');
     const btn = document.getElementById('btn');
     const newDiv = document.getElementById('new');
+	const typing = document.getElementById('typing');
     btn.addEventListener('click', function() {
       // Get the content of the input field
       const inputValue = inputTxt.value;
@@ -43,10 +45,10 @@
       inputTxt.value = '';
     });
     inputTxt.addEventListener('focus', function() {
-      newDiv.textContent = 'typing..';
+		typing.textContent = 'typing..';
     });
     inputTxt.addEventListener('blur', function() {
-      newDiv.textContent = '';
+      typing.textContent = '';
     });
 
 
