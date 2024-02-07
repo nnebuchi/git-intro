@@ -19,41 +19,62 @@
 				<i class="fa fa-bars"></i>
 			</div>
 	</nav>
- 
-		 	<div id="new" style="margin-top: 100px;"></div>
-				
-			
 
-			<div class="bottom-con">
-				<input type="text" id="inputTxt" placeholder="Message">
-  				<button id="btn">Send</button>
-			</div> 
+ 	<select id="dropdown"  style="margin-top: 70px;">
+ 		<option value="drop">Dropdown</option>
+     	<option value="me">Me</option>
+     	<option value="others">Others</option>
+     </select>
+
+	<div id="new" style="margin-top: 30px;"></div>
+	 <div id="typing" style=""></div>
+
+
+
+	<div class="bottom-con">
+		<input type="text" id="inputTxt" placeholder="Message">
+			<button id="btn">Send</button>
+	</div> 
   
-
   <script>
     const inputTxt = document.getElementById('inputTxt');
     const btn = document.getElementById('btn');
+    const dropdown = document.getElementById('dropdown');
     const newDiv = document.getElementById('new');
+	const typing = document.getElementById('typing');
+
     btn.addEventListener('click', function() {
       // Get the content of the input field
       const inputValue = inputTxt.value;
       const newParagraph = document.createElement('p');
       newParagraph.textContent = inputValue;
+
       newDiv.appendChild(newParagraph);
       inputTxt.value = '';
+	
+	const selectedOption = dropdown.value;
+       if (selectedOption === 'me') {
+        newParagraph.style.textAlign = 'right';
+      } else if (selectedOption === 'others') {
+        newParagraph.style.textAlign = 'left';
+      }
     });
+
+
+
     inputTxt.addEventListener('focus', function() {
-      newDiv.textContent = 'typing..';
+      // newDiv.textContent = 'typing..';
+	  typing.textContent = 'typing..';
     });
     inputTxt.addEventListener('blur', function() {
-      newDiv.textContent = '';
+      // newDiv.textContent = '';
+      typing.textContent = '';
     });
 
 
+   
     
   </script>
-	
-	
 	
 </body>
 </html>

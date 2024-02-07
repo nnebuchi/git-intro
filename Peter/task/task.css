@@ -9,7 +9,7 @@
   nav {
     background-color: green;
     height: 70px;
-    width: 97.4%;
+    width: 100%;
     display: flex;
     align-items: center;
     position: fixed;
@@ -45,10 +45,22 @@
    .i-con > i{
    		margin-right: 20px;
    }
-  .txt{
-  	height: 700px;
-  	
+ 
   }
+  #dropdown {
+  padding: 8px 12px;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  background-color: green;
+}
+
+#dropdown option {
+  font-size: 16px;
+  background-color: lightblue;
+}
  
   .bottom-con{
   	position: fixed;
