@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>interface</title>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="task.css">
+	</head>
+<body>
+	<nav>
+			<div class="arrow-con"><i class="fa fa-arrow-left"></i></div>
+			<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqNprrTbSSTuKVdQgSoyII7P355rdoOxp0bXRzJ44nEQ&s" class="img">
+			<div class="wa-con">
+				<h4 class="wa-txt">Sulaiman</h4>
+			</div>
+			<div class="i-con">
+				<i class="fa fa-phone"></i>
+				<i class="fa fa-bars"></i>
+			</div>
+	</nav>
+ 
+		 	<div id="new" style="margin-top: 100px;"></div>
+				
+			
+
+			<div class="bottom-con">
+				<input type="text" id="inputTxt" placeholder="Message">
+  				<button id="btn">Send</button>
+			</div> 
+  
+
+  <script>
+    const inputTxt = document.getElementById('inputTxt');
+    const btn = document.getElementById('btn');
+    const newDiv = document.getElementById('new');
+    btn.addEventListener('click', function() {
+      // Get the content of the input field
+      const inputValue = inputTxt.value;
+      const newParagraph = document.createElement('p');
+      newParagraph.textContent = inputValue;
+      newDiv.appendChild(newParagraph);
+      inputTxt.value = '';
+    });
+    inputTxt.addEventListener('focus', function() {
+      newDiv.textContent = 'typing..';
+    });
+    inputTxt.addEventListener('blur', function() {
+      newDiv.textContent = '';
+    });
+
+
+    
+  </script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,79 @@
+@media only screen and (min-width: 576px) {
+  .body{
+	background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAJoNvhslhPWOwnahx4LD0HqnWbmcXCfrike5XTvQV3g&s);
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	min-height: 750px;
+	}
+
+  nav {
+    background-color: green;
+    height: 70px;
+    width: 97.4%;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+   
+  }
+  .arrow-con{
+  	padding: 20px;
+  }
+  .img{
+  	border-radius: 60%;
+  	height: 60%;
+  	width: 10%;
+  }
+  .wa-con{
+  	width: 60%;
+  	margin: 10px;
+  	padding: 2px 30px;
+  }
+  .wa-txt{
+  	color: white;
+  	font-size: 20px;
+  }
+  .fa-arrow-left, .fa-phone, .fa-bars{
+  	color:white;
+
+  }
+  .i-con{
+  	display: flex;
+   	width: 20%;
+  	
+  }
+   .i-con > i{
+   		margin-right: 20px;
+   }
+  .txt{
+  	height: 700px;
+  	
+  }
+ 
+  .bottom-con{
+  	position: fixed;
+  	bottom: 0;
+  	width: 100%;
+  	padding: 20px;
+  }
+  #inputTxt{
+  	outline: none;
+  	width: 80%;
+  	padding: 10px;
+  	border-radius: 10px;
+  	border: none;
+  	background-color: #e7e8e7;
+
+  }
+  #btn{
+  	padding: 10px;
+  	color: white;
+  	border: none;
+  	background-color: green;
+  	border-radius: 5px;
+  }
+/*  .bottom-con i{
+  	position: absolute;
+  }*/
+
+}
