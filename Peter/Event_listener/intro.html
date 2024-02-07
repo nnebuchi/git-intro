@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="intro.css">
+    <title>Event-Listener</title>
+</head>
+<body>
+    <div >
+        <button id="myId" >
+            Id button
+        </button>
+
+        <button id="react">
+            React   
+        </button>
+</div>
+    <div class="section">
+        <button id="color">
+            See colour
+        </button>
+
+        <button id="backgrand">
+            See Source   
+        </button>
+    </div>
+<div>
+    <button class="btn">first text</button>
+    <button class="btn">second text</button>
+    <button class="btn">third text</button>
+    <button class="btn">fourth text</button>
+ </div>
+
+    <input type="text" id="input" >
+    <p id="text"></p>
+
+ <script src="intro.js"></script>
+ <script>
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            alert(button.textContent);
+        });
+    });
+
+     document.querySelector('#input').addEventListener('focus', function(){
+        document.querySelector('#input').style.outline ='none'
+        document.querySelector('#input').style.border = '3px solid red'
+        document.querySelector('#input').style.borderRadius = '3px'
+     })
+
+     document.querySelector('#input').addEventListener('blur', function(){
+        document.querySelector('#input').style.border = '3px solid blue'
+     })
+    
+     document.querySelector('#input').addEventListener('input', function(){
+        document.querySelector('#text').innerHTML = document.querySelector('#input').value;
+     })
+    
+    /*
+     Or
+      document.querySelector('#input').addEventListener('input', function(){
+      const type = document.getElementById('text');
+      const inputText = document.getElementById('input').value;
+      text.textContent = inputText;
+     })
+      */
+
+</script>
+</body>
+</html>
